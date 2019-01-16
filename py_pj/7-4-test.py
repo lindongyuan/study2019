@@ -25,9 +25,9 @@ while True:
     age = input(message)
     #age = int(age)
     if age == quit:
-    elif age < 3:
+    elif int(age) < 3:
         print("is free")
-    elif age <= 12:
+    elif int(age) <= 12:
         print("The ticket is $10 ")
     else:
         print("The ticket is $15")
