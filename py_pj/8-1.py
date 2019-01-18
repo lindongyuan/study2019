@@ -31,7 +31,7 @@ def describe_pet(pet_name,animal_type):
 describe_pet('dog','willie')
 #关键字实参的调用方法
 describe_pet(animal_type='hamster',pet_name='harry')
-'''
+
 #8.2.3默认值
 #pets.py
 def describe_pet(pet_name,animal_type='dog'):
@@ -41,4 +41,11 @@ def describe_pet(pet_name,animal_type='dog'):
 
 #同以上函数调用结果相同，在函数调用中只提供小狗的名字：
 describe_pet('willie')
-describe_pet(petname='harry',animal_type='hamster')
+describe_pet(pet_name='harry',animal_type='hamster')
+'''
+def describe_pet(animal_type,pet_name):
+    #显示宠物的信息
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet()
