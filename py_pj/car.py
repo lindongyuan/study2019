@@ -1,3 +1,4 @@
+'''一个可用于表示汽车的类'''
 class Car():
     '''一次模拟汽车的简单尝试'''
 
@@ -5,7 +6,7 @@ class Car():
         self.make = make
         self.model = model
         self.year = year
-        self.odometer_reading = 21
+        self.odometer_reading = 0
 
     def get_descriptive_name(self):
         '''返回整洁的描述性信息'''
@@ -26,6 +27,7 @@ class Car():
     def increment_odometer(self,miles):
         '''将里程表计数增加指定的量'''
         self.odometer_reading += miles
+
 
 my_new_car = Car('audi','a4','2016')
 print(my_new_car.get_descriptive_name())

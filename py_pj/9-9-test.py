@@ -30,7 +30,7 @@ class Car():
 class Battery():
     #一次模拟电动汽车电瓶的简单尝试
 
-    def __init__(self,battery_size=75):
+    def __init__(self,battery_size=30):
         '''初始化电瓶属性'''
         self.battery_size = battery_size
 
@@ -48,9 +48,12 @@ class Battery():
         message += " miles on a full charge."
         print(message)
 
+
     def upgrade_battery(self):
-        if self.battery_size <= 85:
-            
+        if self.battery_size < 85:
+            self.battery_size = 85
+            print("Your battery size has been upgrade.")
+            print("The battery size is " + str(self.battery_size) + "-kWh Now.")
 
 class ElectricCar(Car):
     #电动车的独到之处
@@ -72,4 +75,5 @@ class ElectricCar(Car):
 my_tesla = ElectricCar('tesla','model s','2016')
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
+my_tesla.battery.upgrade_battery()
 my_tesla.battery.get_range()
