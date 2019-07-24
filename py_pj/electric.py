@@ -1,3 +1,4 @@
+
 class Car():
     #一次模拟汽车的简单尝试
 
@@ -31,7 +32,7 @@ class Battery():
     #一次模拟电动汽车电瓶的简单尝试
 
     def __init__(self,battery_size=90):
-        '''初始化电瓶属性'''
+        #初始化电瓶属性
         self.battery_size = battery_size
 
     def describe_battery(self):
@@ -47,6 +48,7 @@ class Battery():
         message = "This car can go approximately " + str(range)
         message += " miles on a full charge."
         print(message)
+
 
 class ElectricCar(Car):
     #电动车的独到之处
@@ -64,8 +66,9 @@ class ElectricCar(Car):
         #电动车没有油箱
         print("This car doesn't need a gas tank!")
 '''
-
+'''
 my_tesla = ElectricCar('tesla','model s','2016')
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
+'''
